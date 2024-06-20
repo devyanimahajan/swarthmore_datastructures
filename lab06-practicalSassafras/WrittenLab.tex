@@ -1,0 +1,249 @@
+% This LaTeX file contains your written lab questions.  You may answer these
+% questions just by inserting your answer into this document.
+%
+% If you're unfamiliar with LaTeX, see the document LearningLaTeX.tex in this
+% same directory.  It contains a brief explanation and a few snippets of LaTeX
+% code to get you started; in fact, it should have everything you need to
+% complete this assignment.
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{algpseudocode}
+\usepackage{algorithmicx}
+\usepackage{enumerate}
+
+\newtheorem{claim}{Claim}
+
+\begin{document}
+\textbf{Devyani Mahajan}
+
+\textbf{CS 35 Lab 6}
+    \section{Inductive Proofs}
+
+    Prove each of the following claims by induction
+
+    \begin{claim}
+      The sum of the first $n$ odd numbers is $n^2$.  That is, $\sum\limits_{i=1}^n (2i-1) = n^2$
+    \end{claim}
+
+	$P(n): \sum\limits_{i=1}^n (2i-1) = n^2$
+
+    Let us examine the claim for n=1 or P(1):
+
+    $\sum\limits_{i=1}^1 (2i-1) = 1^2$
+
+    $(2*1 -1) = 1^2$
+
+    $1 = 1$
+
+    LHS = RHS
+
+    The claim is true for n=1, P(1) is true
+
+
+    Assume true for the case of n=k, or P(k)
+    $\sum\limits_{i=1}^k (2i-1) = k^2$
+
+
+    Now let us examine if the proposition holds true for k+1
+
+    Prove P(k+1) is true:
+
+    $\sum\limits_{i=1}^{k+1} (2i-1) = (k+1)^2$
+
+    LHS = $\sum\limits_{i=1}^k (2i-1)+2(k+1)-1$
+
+    = $k^2+2k+2-1$
+
+    = $k^2+2k+1$
+
+    = $(k+1)^2$ = RHS
+
+    LHS = RHS
+
+    P(k+1) is true when P(k) is true
+
+
+    Therefore P(n) is true for all $n \geq 1$ by principle of mathematical induction
+
+
+
+    \begin{claim}
+      $\sum\limits_{i=1}^{n} \dfrac{1}{2^i} = 1 - \dfrac{1}{2^n}$
+    \end{claim}
+
+    $P(n): \sum\limits_{i=1}^{n} \dfrac{1}{2^i} = 1 - \dfrac{1}{2^n}$
+
+    Let us examine the claim for $n=1 or P(1):$
+    
+    $\sum\limits_{i=1}^{1} \dfrac{1}{2^i} = 1 - \dfrac{1}{2^1}$
+    
+    = $\dfrac{1}{2} = 1 - \dfrac{1}{2}$
+
+    The claim is true for $n=1, P(1)$ is true
+
+
+    Assume true for the case of $n=k, or P(k)$
+    
+    $\sum\limits_{i=1}^{k} \dfrac{1}{2^i} = 1 - \dfrac{1}{2^k}$
+
+    
+    Now let us examine if the proposition holds true for k+1
+
+    Prove P(k+1) is true:
+    
+    LHS = $\sum\limits_{i=1}^{k+1} \dfrac{1}{2^i}$
+    
+    = $\sum\limits_{i=1}^{k} \dfrac{1}{2^i} + \dfrac{1}{2^{k+1}}$
+    
+    = $1 - \dfrac{1}{2^k} + \dfrac{1}{2*2^k}$
+    
+    = $1 - \dfrac{1}{2^k} + \dfrac{1}{2} \dfrac{1}{2^k}$
+    
+    = $1 - \dfrac{1}{2^k} (1 - \dfrac{1}{2})$
+    
+    = $1 - \dfrac{1}{2^k} * \dfrac{1}{2}$
+    
+    = $1 - \dfrac{1}{2^{k+1}}$ = RHS
+
+    LHS = RHS
+
+    P(k+1) is true when P(k) is true
+
+
+    Therefore P(n) is true for all $n \geq 1$ by principle of mathematical induction
+
+
+
+
+    \begin{claim}
+      $\sum\limits_{i=1}^{n} i^2 = \dfrac{n(n+1)(2n+1)}{6}$
+    \end{claim}
+
+
+    $P(n) : \sum\limits_{i=1}^{n} i^2 = \dfrac{n(n+1)(2n+1)}{6}$
+    
+    Let us examine the claim for n=1 or P(1):
+    
+    $\sum\limits_{i=1}^{1} i^2 = \dfrac{1(1+1)(2*1+1)}{6}$
+    
+    $LHS = 1$
+    
+    $RHS = 1 = LHS$
+
+    The claim is true for n=1, P(1) is true
+
+    
+    Assume true for the case of n=k, or P(k)
+    
+    $\sum\limits_{i=1}^{k} i^2 = \dfrac{k(k+1)(2k+1)}{6}$
+
+    Now let us examine if the proposition holds true for k+1
+
+    Prove P(k+1) is true:
+    
+    $ P(k+1): \sum\limits_{i=1}^{k+1} i^2 = \dfrac{(k+1)(k+2)(2(k+1)+1)}{6}
+    
+    
+    $LHS = \sum\limits_{i=1}^{k+1} i^2$
+    
+    $= {(k+1)}^2 + \sum\limits_{i=1}^{k} i^2 $
+    
+    $= {(k+1)}^2 + \dfrac{k(k+1)(2k+1)}{6}$
+    
+    Expanding this, we get:
+    
+    $\dfrac{2k^3 + 8k^2 + 13k + 6}{6}$
+    
+    
+    $RHS = \dfrac{(k+1)(k+2)(2(k+1)+1)}{6}$
+    
+    $= \dfrac{(k+1)(k+2)(2k+3)}{6}$
+    
+    Expanding this, we get:
+    
+    $\dfrac{2k^3 + 8k^2 + 13k + 6}{6} = LHS$
+
+    LHS = RHS
+
+    P(k+1) is true when P(k) is true
+
+
+    Therefore P(n) is true for all $n \geq 1$ 
+    by principle of mathematical induction
+
+
+
+
+    \vspace{1cm}
+    \section{Recursive Invariants}
+
+    The function \texttt{minEven}, given below in pseudocode, takes as input an array $A$ of size $n$ of numbers.  It returns the smallest \textit{even} number in the array.  If no even numbers appear in the array, it returns positive infinity ($+\infty$).  Using induction, prove that the \texttt{minEven} function works correctly.  Clearly state your recursive invariant at the beginning of your proof.
+
+    \begin{verbatim}
+Function minEven(A,n)
+  If n = 0 Then
+    Return +∞
+  Else
+    Set best To minEven(A,n-1)
+    If A[n-1] < best And A[n-1] is even Then
+      Set best To A[n-1]
+    EndIf
+    Return best
+  EndIf
+EndFunction
+    \end{verbatim}
+
+    Let us examine the function \texttt{minEven} for an array A of size 0
+
+    In this case \texttt{minEven(A,0)} will return $+\infty$
+
+    Hence the function \texttt{minEven} works correctly for $n=0$
+
+    This is the recursive invariant ${P(0)}$
+
+
+    Let us assume that the \texttt{minEven} function works correctly for an array \texttt{A} of size \texttt{k} and returns \texttt{m}
+
+    This is $P(k)$ and is assumed to be true.
+
+    We have to prove that $P(K+1)$ is true given $P(K)$ is true.
+
+    Assume that one more element \texttt{E} is added to the array \texttt{A} increasing its size to \texttt{k+1}
+
+    This element \texttt{E} will be added in the position \texttt{A[n-1]}
+
+    \texttt{E}'s value  can have three cases:
+
+    \textbf{Case 1:} \texttt{E} is odd
+
+    \textbf{Case 2:} \texttt{E} is Even and \texttt{E} \geq \texttt{m}
+
+    \textbf{Case 3:} \texttt{E} is Even and \texttt{E} $<$ \texttt{m}
+
+    Let us now run \texttt{minEven(A,K+1)}:
+
+    $k > 0$, so we go to the \texttt{Else} branch
+    \begin{verbatim}
+    Set best To minEven(A,n-1): best = m
+
+    If A[n-1] < best And A[n-1] is even Then - Case 3
+      Set best To A[n-1]: best = E
+    EndIf
+    Return best : return m for Case 1 and Case 2, return k for Case 3
+    \end{verbatim}
+    So \texttt{minEven} works correctly for array of size k+1 if it works for correctly for size k
+
+    for all cases of the added element /texttt{E}
+
+    Hence $P(K+1)$ is true given $P(K)$ is true.
+
+    Hence this function works correctly for all arrays of integers
+
+    using the principle of mathematical induction.
+
+
+
+\end{document}
