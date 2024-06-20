@@ -1,0 +1,40 @@
+\par\begingroup
+\newcommand{\treeDiagramWidth}{0.9\textwidth}
+\newcommand{\minimumNodeSize}{8mm}
+\newcommand{\verticalSpacing}{10mm}
+\begin{center}\begin{tikzpicture}
+\tikzstyle{treeNode}=[minimum width=\minimumNodeSize,minimum height=\minimumNodeSize,circle,draw,inner sep=1mm]
+\tikzstyle{treeEdge}=[->]
+\node[minimum width=\treeDiagramWidth,rectangle] at (\treeDiagramWidth/2,0) {};\node[treeNode] (n-0-0) at ( {(\treeDiagramWidth-(\minimumNodeSize*1))/(1)*(0+0.5) + \minimumNodeSize/2 + \minimumNodeSize*0}, {-0*\verticalSpacing}) {30};
+\node[treeNode] (n-1-0) at ( {(\treeDiagramWidth-(\minimumNodeSize*2))/(2)*(0+0.5) + \minimumNodeSize/2 + \minimumNodeSize*0}, {-1*\verticalSpacing}) {20};
+\node[treeNode] (n-2-0) at ( {(\treeDiagramWidth-(\minimumNodeSize*4))/(4)*(0+0.5) + \minimumNodeSize/2 + \minimumNodeSize*0}, {-2*\verticalSpacing}) {10};
+\draw[treeEdge] (n-1-0) -- (n-2-0);
+\node[treeNode] (n-2-1) at ( {(\treeDiagramWidth-(\minimumNodeSize*4))/(4)*(1+0.5) + \minimumNodeSize/2 + \minimumNodeSize*1}, {-2*\verticalSpacing}) {12};
+\draw[treeEdge] (n-1-0) -- (n-2-1);
+\draw[treeEdge] (n-0-0) -- (n-1-0);
+\node[treeNode] (n-1-1) at ( {(\treeDiagramWidth-(\minimumNodeSize*2))/(2)*(1+0.5) + \minimumNodeSize/2 + \minimumNodeSize*1}, {-1*\verticalSpacing}) {40};
+\draw[treeEdge] (n-0-0) -- (n-1-1);
+\end{tikzpicture}\end{center}
+\endgroup\par
+
+after rebalancing
+
+
+\par\begingroup
+\newcommand{\treeDiagramWidth}{0.9\textwidth}
+\newcommand{\minimumNodeSize}{8mm}
+\newcommand{\verticalSpacing}{10mm}
+\begin{center}\begin{tikzpicture}
+\tikzstyle{treeNode}=[minimum width=\minimumNodeSize,minimum height=\minimumNodeSize,circle,draw,inner sep=1mm]
+\tikzstyle{treeEdge}=[->]
+\node[minimum width=\treeDiagramWidth,rectangle] at (\treeDiagramWidth/2,0) {};\node[treeNode] (n-0-0) at ( {(\treeDiagramWidth-(\minimumNodeSize*1))/(1)*(0+0.5) + \minimumNodeSize/2 + \minimumNodeSize*0}, {-0*\verticalSpacing}) {20};
+\node[treeNode] (n-1-0) at ( {(\treeDiagramWidth-(\minimumNodeSize*2))/(2)*(0+0.5) + \minimumNodeSize/2 + \minimumNodeSize*0}, {-1*\verticalSpacing}) {10};
+\node[treeNode] (n-2-1) at ( {(\treeDiagramWidth-(\minimumNodeSize*4))/(4)*(1+0.5) + \minimumNodeSize/2 + \minimumNodeSize*1}, {-2*\verticalSpacing}) {12};
+\draw[treeEdge] (n-1-0) -- (n-2-1);
+\draw[treeEdge] (n-0-0) -- (n-1-0);
+\node[treeNode] (n-1-1) at ( {(\treeDiagramWidth-(\minimumNodeSize*2))/(2)*(1+0.5) + \minimumNodeSize/2 + \minimumNodeSize*1}, {-1*\verticalSpacing}) {30};
+\node[treeNode] (n-2-3) at ( {(\treeDiagramWidth-(\minimumNodeSize*4))/(4)*(3+0.5) + \minimumNodeSize/2 + \minimumNodeSize*3}, {-2*\verticalSpacing}) {40};
+\draw[treeEdge] (n-1-1) -- (n-2-3);
+\draw[treeEdge] (n-0-0) -- (n-1-1);
+\end{tikzpicture}\end{center}
+\endgroup\par
