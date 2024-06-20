@@ -1,0 +1,32 @@
+Answer the following questions by modifying this text file.  Write
+your answers between each question.  You're not being graded or judged
+on these answers.
+
+1. What is your name?  What do you prefer to be called?
+
+
+
+2. Why are you taking CS35?
+
+
+
+3. What is your previous experience in Computer Science?  What
+programming languages do you know, and which classes have you taken?
+
+
+
+4. These are a couple questions about how you approach your assignments.
+
+  a. Do you start on your homework as soon as it is assigned or do you
+  tend to finish it right before it's due?
+  
+  
+  
+  b. When doing group work, do you prefer for your group to split your
+  work up into pieces or do you like to work together as a group
+  through as much of the material as possible?
+
+
+
+5. What do you consider fun?
+
